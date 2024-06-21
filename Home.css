@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    font-weight: 500;
     font-style: normal;
     text-decoration: none;
     list-style: none;
@@ -20,14 +21,18 @@
     --third-color: #F7B32D;
 }
 
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    font-weight: bolder;
+    margin: 0;
     padding-top: 80px; /* Adjust this value to match the height of the header */
+    padding: 0;
 }
+
 
 header {
     position: fixed; /* Changed from absolute to fixed */
@@ -48,7 +53,6 @@ header {
     display: flex;
     align-items: center;
 }
-
 .logo svg {
     color: var(--main-color);
     font-size: 28px;
@@ -137,8 +141,7 @@ header {
         right: -100%;
         width: 270px;
         height: 29vh;
-        background-color: var(--bg-color);
-        box-shadow: 0 0 5px #333;
+        background-color: var(--main-color);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -166,285 +169,99 @@ header {
     }
 }
 
-/* Content */
-.content {
-    flex: 1; /* Allows the content to grow and push the footer to the bottom */
-    margin: 40px;
-    /* background-color: #C00000; */
-}
-.main-content{
-    float:left;
-    width: 72%;
-    /* background-color: var(--third-color); */
-    border-style: solid #000000;
-    /* margin-right: ; */
-}
-
-.court-pic{
-    width: 1036px;
-    height: 450px;
-}
-
-.court-pic img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-}
-
-.h-line{
-    width: 100%;
-    height: 1.3px;
-    background-color: var(--darkerW-color);
-    margin-bottom: 20px;
-    margin-top: 20px;
-    border: none;
-}
-
-article{
-    color: var(--text-color);
-    font-weight: 500;
-    font-size: 15px;
-}
-
-input{
-    display: none;
-}
-.calendar-container {
-    max-width: 100%;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid --bg-color;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.dates{
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--text-color);
-}
-
-.dates-item{
-    width: 100px;
-    height: 70px;
-    background-color: var(--bg-color);
+.hero {
+    position: relative;
+    height: 400px;
+    color: #fff;
     text-align: center;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-.day{
-    font-size: 13px;
-    font-weight: 400;
-}
-.dates{
-    font-size: 14px;
-    font-weight: 700;
-}
-.timings input:checked + label{
-    background-color: var(--main-color);
-    color: var(--bg-color);
-    transition: all 0.2s ease;
-}
-.v-line{
-    width: 1.3px;
-    height: 50px;
-    background-color: var(--darkerW-color);
-    border: none;
-    margin-right: 30px;
-    margin-left: 30px;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
 }
 
-.more-dates{
-    width: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--text-color);
-    padding: 70px;
-}
-
-
-.side-bar{
-    float: right;
-    width: 25%;
-    height: 570px;
-    border: 1px solid --darkW-color;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 30px 25px 30px 25px;
-    position: sticky;
-    top: 120px;
-}
-
-.h-line-side{
-    width: 100%;
-    height: 2px;
-    background-color: var(--darkerW-color);
-    margin-bottom: 10px;
-    margin-top: 10px;
-    border: none;
-}
-
-.judul{
-    height: 50px;
-    /* background-color: #333; */
-}
-
-.judul p#gor{
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.judul #rating{
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--main-color);
-}
-
-.locfaci{
-    height: 235px;
-    /* background-color: #333; */
-}
-
-.locfaci .loc{
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.locfaci .fac{
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.container-side{
-    max-width: 100%;
-    height: 30%;
+.content {
     padding: 20px;
-    border: 1px solid --bg-color;
-    border-radius: 10px;
-    background-color: var(--darkW-color);
-}
-
-.container-side .content{
-    float: left;
-    width: 100%;
-    /* background-color: var(--main-color); */
-}
-
-.container-side .content .text{
-    float: left;
-    width: 50%;
-    background-color: var(--third-color);
-}
-
-.container-side .content .icon-loca{
-    float: left;
-    width: 50%;
-    background-color: var(--second-color);
-}
-
-.container-side .text p{
-    font-size: 12px;
-    font-weight: 400;
-}
-
-.card {
-    background-color: white;
-    border-radius: 15px;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card h1 {
-    margin-top: 0;
-}
-
-.rating {
-    display: flex;
-    align-items: center;
-}
-
-.rating span:first-child {
-    font-size: 1.5em;
-    margin-right: 5px;
-    color: gold;
-}
-
-.location-details {
-    display: flex;
-    align-items: center;
-}
-
-.location-details span {
-    margin-right: 10px;
-}
-
-.location-details img {
-    width: 20px;
-    height: 20px;
-}
-
-.facilities {
-    margin: 20px 0;
-}
-
-.facility-icons {
     display: flex;
     justify-content: space-around;
 }
 
-.facility {
-    text-align: center;
+.content .card {
+    background: #f9f9f9;
+    padding: 20px;
+    width: 45%;
+    position: relative;
 }
 
-.facility img {
-    width: 30px;
-    height: 30px;
-    display: block;
-    margin: 0 auto 5px;
+.content .card-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-.price {
-    margin: 20px 0;
-    text-align: center;
+.background-container:hover {
+    transform: scale(1.1); /* Memperbesar gambar saat dihover */
+    transition: transform 0.3s ease; /* Efek transisi saat perubahan terjadi */
 }
 
-.order-button {
-    background-color: #888;
-    color: white;
+.background-container {
+    width: 500px;  /* Ubah ukuran sesuai kebutuhan */
+    height: 300px; /* Ubah ukuran sesuai kebutuhan */
+    background-size: cover;
+    background-position: center;
+    margin: 0 10px;
+    border-radius: 10px; /* Tambahkan border radius jika diinginkan */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan jika diinginkan */
+}
+
+.arrow-left, .arrow-right {
+    background: none;
     border: none;
-    border-radius: 5px;
-    padding: 10px;
-    width: 100%;
+    color: #333;
+    font-size: 24px;
     cursor: pointer;
-    font-size: 1em;
 }
 
-.order-button:hover {
-    background-color: #555;
-}
-
-.selected-items {
+.booking {
+    background: #f2f2f2;
+    padding: 20px;
     text-align: center;
-    margin-top: 10px;
-    color: #888;
 }
 
-.order{
-    height: 150px;
-    background-color: #333;
+.booking .filter {
+    margin-bottom: 20px;
 }
-/* Content */
+
+.booking .filter button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.booking .venues {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.booking .venue-card {
+    background: #fff;
+    padding: 20px;
+    width: 30%;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pagination a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #333;
+}
 
 /* Footer */
 .container {
