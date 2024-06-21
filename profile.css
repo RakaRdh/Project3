@@ -5,7 +5,6 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    font-weight: 500;
     font-style: normal;
     text-decoration: none;
     list-style: none;
@@ -25,11 +24,9 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: Arial, sans-serif;
-    font-weight: bolder;
-    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     padding-top: 80px; /* Adjust this value to match the height of the header */
-    padding: 0;
 }
 
 header {
@@ -51,6 +48,7 @@ header {
     display: flex;
     align-items: center;
 }
+
 .logo svg {
     color: var(--main-color);
     font-size: 28px;
@@ -85,13 +83,6 @@ header {
 }
 
 .main a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--main-color);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
     margin-right: 25px;
     margin-left: 10px;
     color: var(--text-color);
@@ -157,7 +148,8 @@ header {
         right: -100%;
         width: 270px;
         height: 29vh;
-        background-color: var(--main-color);
+        background-color: var(--bg-color);
+        box-shadow: 0 0 5px #333;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -185,65 +177,8 @@ header {
     }
 }
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-main {
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-}
-
-.news-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    width: 100%;
-    max-width: 1200px;
-}
-
-.news-card {
-    /* Pengaturan default */
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-}
-
-.news-card:hover {
-    /* Pengaturan saat dihover */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    transform: scale(1.02);
-}
 
 
-.image-placeholder {
-    /* Pengaturan untuk placeholder gambar */
-    height: 200px; /* Atur tinggi gambar sesuai kebutuhan */
-    background-color: #ccc; /* Warna latar belakang placeholder */
-}
-
-.news-content {
-    /* Pengaturan untuk konten berita */
-    padding: 20px;
-}
-
-.news-content h2 {
-    /* Pengaturan untuk judul berita */
-    margin-top: 0;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.news-content p {
-    /* Pengaturan untuk paragraf */
-    margin-bottom: 5px;
-}
 
 /* Footer */
 .container {

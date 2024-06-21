@@ -102,6 +102,17 @@ header {
     margin-right: 7px;
 }
 
+.log-out {
+    display: flex;
+    align-items: center;
+}
+
+.log-out i {
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 7px;
+}
+
 .main a:hover {
     color: var(--bg-color);
 }
@@ -246,6 +257,7 @@ input{
     font-weight: 400;
 }
 .dates{
+    width: 100%;
     font-size: 14px;
     font-weight: 700;
 }
@@ -264,12 +276,13 @@ input{
 }
 
 .more-dates{
-    width: 20%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: var(--text-color);
     padding: 70px;
+    background-color: var(--main-color);
 }
 
 
@@ -283,6 +296,12 @@ input{
     padding: 30px 25px 30px 25px;
     position: sticky;
     top: 120px;
+    background-color: var(--bg-color);
+}
+
+.side-content{
+    width: 100%;
+    height: 100%;
 }
 
 .h-line-side{
@@ -294,35 +313,107 @@ input{
     border: none;
 }
 
-.judul{
-    height: 50px;
+.gor-desc{
+    height: 10%;
     /* background-color: #333; */
 }
 
-.judul p#gor{
+.gor-desc p#gor-name{
     font-size: 18px;
     font-weight: 700;
 }
 
-.judul #rating{
+.gor-desc #rating{
     font-size: 12px;
     font-weight: 500;
     color: var(--main-color);
 }
 
 .locfaci{
-    height: 235px;
+    height: 55%;
     /* background-color: #333; */
 }
 
-.locfaci .loc{
+.locfaci .judul{
     font-size: 18px;
     font-weight: 700;
+    margin-bottom: 5px;
 }
 
-.locfaci .fac{
-    font-size: 18px;
-    font-weight: 700;
+.locfaci .maps{
+    width: 100%;
+    height: 35%;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.locfaci .maps:hover{
+    background-color: var(--text-color);
+    transition: all 0.2s ease;
+}
+
+.locfaci .maps .text{
+    height: 100%;
+    width: 75%;
+    float: left;
+    /* background-color: var(--third-color); */
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.locfaci .maps .pic{
+    height: 100%;
+    width: 20%;
+    float: right;
+    /* background-color: var(--second-color); */
+    font-size: 35px;
+    color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.locfaci .facilities{
+    width: 100%;
+    height: 37%;
+    /* background-color: var(--main-color); */
+    border-radius: 10px;
+    padding: 10px auto;
+}
+
+.locfaci .facilities .items .facil-text{
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.locfaci .facilities .items .facil-icon{
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+.locfaci .facilities .items{
+    /* background-color: var(--third-color); */
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    float: left;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.locfaci .facilities .items .facil-text{
+    font-size: 13px;
+    font-weight: 500;
 }
 
 .container-side{
@@ -357,92 +448,61 @@ input{
     font-weight: 400;
 }
 
-.card {
-    background-color: white;
-    border-radius: 15px;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card h1 {
-    margin-top: 0;
-}
-
-.rating {
-    display: flex;
-    align-items: center;
-}
-
-.rating span:first-child {
-    font-size: 1.5em;
-    margin-right: 5px;
-    color: gold;
-}
-
-.location-details {
-    display: flex;
-    align-items: center;
-}
-
-.location-details span {
-    margin-right: 10px;
-}
-
-.location-details img {
-    width: 20px;
-    height: 20px;
-}
-
-.facilities {
-    margin: 20px 0;
-}
-
-.facility-icons {
-    display: flex;
-    justify-content: space-around;
-}
-
-.facility {
-    text-align: center;
-}
-
-.facility img {
-    width: 30px;
-    height: 30px;
-    display: block;
-    margin: 0 auto 5px;
-}
-
-.price {
-    margin: 20px 0;
-    text-align: center;
-}
-
-.order-button {
-    background-color: #888;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    width: 100%;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-.order-button:hover {
-    background-color: #555;
-}
-
-.selected-items {
-    text-align: center;
-    margin-top: 10px;
-    color: #888;
-}
-
 .order{
-    height: 150px;
-    background-color: #333;
+    height: 32%;
+    /* background-color: #333; */
+}
+
+.order .judul{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.order .subjudul{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.order .buttonPesan{
+    width: 100%;
+    height: 30%;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.order .buttonPesan .keterangan{
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-color);
+}
+
+.order .buttonPesan:hover{
+    background-color: var(--text-color);
+    transition: all 0.2s ease;
+}
+
+.order .jumlahItem{
+    width: 100%;
+    height: 20%;
+    /* background-color: var(--darkerW-color); */
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+
+.order .jumlahItem .keterangan{
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /* Content */
 
