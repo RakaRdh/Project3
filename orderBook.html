@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran</title>
+    <link rel="stylesheet" href="orderBook.css">
+</head>
+<body>
+    <header>
+        <h1>Halaman Pembayaran</h1>
+    </header>
+
+    <main>
+        <section id="selected-items">
+            <h2>Detail Item yang Dipilih</h2>
+            <ul id="selected-items-list">
+                <!-- Selected items will be dynamically inserted here -->
+            </ul>
+        </section>
+
+        <section id="payment-details">
+            <h2>Detail Pembayaran</h2>
+            <div id="payment-total">
+                Total: <span id="total-amount"></span>
+            </div>
+            <button id="pay-now">Bayar Sekarang</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Halaman Pembayaran</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const itemsJSON = urlParams.get('items');
+            const items = JSON.parse(decodeURIComponent(itemsJSON));
+
+            const selectedItemsList = document.getElementById('selected-items-list');
+            const totalAmountSpan = document.getElementById('total-amount');
+
+            let totalAmount = 0;
+
+            items.forEach(function(item) {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.durasi} | ${item.jam} | ${item.harga} | ${item.status} | Qty: ${item.quantity}`;
+                selectedItemsList.appendChild(listItem);
+
+                totalAmount += parseInt(item.harga) * parseInt(item.quantity); // Calculate total amount based on quantity
+            });
+
+            totalAmountSpan.textContent = `Rp ${totalAmount.toLocaleString()}`;
+
+            const payNowButton = document.getElementById('pay-now');
+            payNowButton.addEventListener('click', function() {
+                // Placeholder for payment process logic
+                alert('Implement your payment process logic here.');
+            });
+        });
+    </script>
+    </script>
+</body>
+</html>

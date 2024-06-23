@@ -296,6 +296,7 @@ input{
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
 }
 
 .court-info {
@@ -461,8 +462,19 @@ input{
     margin-top: 10px;
 }
 
-.items{
+.items {
+    margin-top: 10px;
+    position: relative;
     width: 25%;
+    height: 100%;
+}
+
+.items input {
+    display: none;
+}
+
+.items label {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -473,11 +485,27 @@ input{
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
     text-align: center;
     position: relative;
-    padding: 15px;
+    padding-bottom: 15px;
+
 }
 
-.items input{
-    display: none;
+.items label:before{
+    content: "✓";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 8px;
+    right: 8px;
+    background: var(--main-color);
+    color: var(--bg-color);
+    text-align: center;
+    line-height: 18px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.2s ease-in-out;
 }
 
 .items .image{
@@ -494,7 +522,28 @@ input{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.items input:checked + label::before{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.items input:checked + label{
+    border: 3px solid var(--main-color);
+}
+
+.items .nama-item{
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.items .harga-item{
+    font-size: 13px;
+    font-weight: 600;
 }
 
 .checkbox {
@@ -503,10 +552,80 @@ input{
 }
 .quantity-form {
     display: none;
+    margin-top: 10px;
 }
 
+.quantity-form .qty-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
 
+.qty-title{
+    width: 15%;
+    /* background-color: var(--second-color); */
+    float: left;
+    margin-left: 10px;
+}
 
+.qty-form{
+    width: 50%;
+    margin-left: 10px;
+}
+
+.qty-form .stepper-input{
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    border: 1px solid var(--main-color);
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.stepper-input input{
+    display: none;
+}
+
+.stepper-input .qty-input{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.stepper-input .qty-input button{
+    width: 25%;
+    height: 24px;
+    border-radius: 10px;
+    background: var(--bg-color);
+    color: var(--main-color);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.stepper-input .qty-input button:active{
+    background: var(--darkW-color);
+}
+
+.stepper-input .qty-input .range{
+    flex: 1;
+    text-align: center;
+    overflow: hidden;
+}
+
+.stepper-input .qty-input .range .list span{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: var(--main-color);
+    font-size: 15px;
+
+}
 
 .side-bar{
     float: right;
