@@ -84,55 +84,8 @@
 
             <!-- PENDING -->
             <div class="calendar-container">
-                <!-- <div class="timings">
-                    <div class="dates">
-                        <div class="date-select">
-                            <input type="radio" name="date" id="d1" >
-                            <label for="d1" class="dates-item">
-                                <div class="day">Sun</div>
-                                <div class="date">23 June</div>
-                            </label>
-                            <input type="radio" name="date" id="d2" >
-                            <label for="d2" class="dates-item">
-                                <div class="day">Mon</div>
-                                <div class="date">24 June</div>
-                            </label>
-                            <input type="radio" name="date" id="d3" checked>
-                            <label for="d3" class="dates-item">
-                                <div class="day">Tue</div>
-                                <div class="date">25 June</div>
-                            </label>
-                            <input type="radio" name="date" id="d4" >
-                            <label for="d4" class="dates-item">
-                                <div class="day">Wed</div>
-                                <div class="date">26 June</div>
-                            </label>
-                            <input type="radio" name="date" id="d5" >
-                            <label for="d5" class="dates-item">
-                                <div class="day">Thu</div>
-                                <div class="date">27 June</div>
-                            </label>
-                            <input type="radio" name="date" id="d6" >
-                            <label for="d6" class="dates-item">
-                                <div class="day">Fri</div>
-                                <div class="date">28 June</div>
-                            </label>
-                            <input type="radio" name="date" id="d7" >
-                            <label for="d7" class="dates-item">
-                                <div class="day">Sat</div>
-                                <div class="date">29 June</div>
-                            </label>
-                        </div>
-                        
-                        <div class="v-line"></div>
-
-                        <div class="more-date">
-                            <i class="ri-calendar-line"></i>
-                            <input type="button" name="more-date" id="more-date">
-                            <label for="">More Date</label>
-                        </div>
-                    </div>
-                </div>-->
+                <label for="date-book">Pilih Tanggal: </label>
+                <input type="date" name="date-book" id="date-book" required>
             </div>
 
             <div class="container">
@@ -143,7 +96,7 @@
         
                     <div class="court-details">
                         <div class="no-lapangan">Lapangan 1 ></div>
-                        <div class="desc-lapangan">Lapangan asoy geboy luar biasa cihuyy anjay mabar</div>
+                        <div class="desc-lapangan">Lapangan dengan kualitas yang terbuat dari Polyvinyl Chloride dengan net premium.</div>
                         <div class="complement">
                             <div class="icon">
                                 <i class="ri-trophy-line"></i>
@@ -174,16 +127,50 @@
                     <button class="dropdown-btn" onclick="toggleDropdown(this)"></button>
                     <div class="schedule">
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad1" value="jad1" class="checkbox-input">
-                            <label for="jad1">
+                            <input type="checkbox" name="lapangan" id="1-jad1" value="1 : 06.00 - 07.00" class="checkbox-input">
+                            <label for="1-jad1">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
                                     06.00 - 07.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
+                                </div>
+                                <div class="status">
+                                    Booked
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="1-jad2" value="1: 07.00 - 08.00" class="checkbox-input">
+                            <label for="1-jad2">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    07.00 - 08.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
+                                </div>
+                                <div class="status">
+                                    Booked
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="1-jad3" value="1: 08.00 - 09.00" class="checkbox-input">
+                            <label for="1-jad3">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    08.00 - 09.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
                                 </div>
                                 <div class="status">
                                     Available
@@ -191,16 +178,16 @@
                             </label>
                         </div>
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad2" value="jad2" class="checkbox-input">
-                            <label for="jad2">
+                            <input type="checkbox" name="lapangan" id="1-jad4" value="1: 09.00 - 10.00" class="checkbox-input">
+                            <label for="1-jad4">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
-                                    06.00 - 07.00
+                                    09.00 - 10.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
                                 </div>
                                 <div class="status">
                                     Available
@@ -208,16 +195,33 @@
                             </label>
                         </div>
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad3" value="jad3" class="checkbox-input">
-                            <label for="jad3">
+                            <input type="checkbox" name="lapangan" id="1-jad5" value="1: 10.00 - 11.00" class="checkbox-input">
+                            <label for="1-jad5">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
-                                    06.00 - 07.00
+                                    10.00 - 11.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
+                                </div>
+                                <div class="status">
+                                    Booked
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="1-jad6" value="1: 11.00 - 12.00" class="checkbox-input">
+                            <label for="1-jad6">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    11.00 - 12.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
                                 </div>
                                 <div class="status">
                                     Available
@@ -225,16 +229,16 @@
                             </label>
                         </div>
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad4" value="jad4" class="checkbox-input">
-                            <label for="jad4">
+                            <input type="checkbox" name="lapangan" id="1-jad7" value="1: 12.00 - 13.00" class="checkbox-input">
+                            <label for="1-jad7">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
-                                    06.00 - 07.00
+                                    12.00 - 13.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
                                 </div>
                                 <div class="status">
                                     Available
@@ -242,16 +246,16 @@
                             </label>
                         </div>
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad5" value="jad5" class="checkbox-input">
-                            <label for="jad5">
+                            <input type="checkbox" name="lapangan" id="1-jad8" value="1: 13.00 - 14.00" class="checkbox-input">
+                            <label for="1-jad8">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
-                                    06.00 - 07.00
+                                    13.00 - 14.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
                                 </div>
                                 <div class="status">
                                     Available
@@ -259,16 +263,16 @@
                             </label>
                         </div>
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad6" value="jad6" class="checkbox-input">
-                            <label for="jad6">
+                            <input type="checkbox" name="lapangan" id="1-jad9" value="1: 14.00 - 15.00" class="checkbox-input">
+                            <label for="1-jad9">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
-                                    06.00 - 07.00
+                                    14.00 - 15.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
                                 </div>
                                 <div class="status">
                                     Available
@@ -276,16 +280,16 @@
                             </label>
                         </div>
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad7" value="jad7" class="checkbox-input">
-                            <label for="jad7">
+                            <input type="checkbox" name="lapangan" id="1-jad10" value="1: 15.00 - 16.00" class="checkbox-input">
+                            <label for="1-jad10">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
-                                    06.00 - 07.00
+                                    15.00 - 16.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
                                 </div>
                                 <div class="status">
                                     Available
@@ -293,19 +297,104 @@
                             </label>
                         </div>
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad8" value="jad8" class="checkbox-input">
-                            <label for="jad8">
+                            <input type="checkbox" name="lapangan" id="1-jad11" value="1: 16.00 - 17.00" class="checkbox-input">
+                            <label for="1-jad11">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
-                                    06.00 - 07.00
+                                    16.00 - 17.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
+                                </div>
+                                <div class="status">
+                                    Booked
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="1-jad12" value="1: 17.00 - 18.00" class="checkbox-input">
+                            <label for="1-jad12">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    17.00 - 18.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
                                 </div>
                                 <div class="status">
                                     Available
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="1-jad13" value="1: 18.00 - 19.00" class="checkbox-input">
+                            <label for="1-jad13">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    18.00 - 19.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
+                                </div>
+                                <div class="status">
+                                    Available
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="1-jad14" value="1: 19.00 - 20.00" class="checkbox-input">
+                            <label for="1-jad14">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    19.00 - 20.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
+                                </div>
+                                <div class="status">
+                                    Available
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="1-jad15" value="1: 20.00 - 21.00" class="checkbox-input">
+                            <label for="1-jad15">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    20.00 - 21.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
+                                </div>
+                                <div class="status">
+                                    Booked
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="1-jad16" value="1: 21.00 - 22.00" class="checkbox-input">
+                            <label for="1-jad16">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    21.00 - 22.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
+                                </div>
+                                <div class="status">
+                                    Booked
                                 </div>
                             </label>
                         </div>
@@ -316,12 +405,12 @@
             <div class="container">
                 <div class="court-info">
                     <div class="court-pic">
-                        <img src="GOR6.jpg" alt="Badminton Court">
+                        <img src="GOR4.jpg" alt="Badminton Court">
                     </div>
         
                     <div class="court-details">
-                        <div class="no-lapangan">Lapangan 1 ></div>
-                        <div class="desc-lapangan">Lapangan asoy geboy luar biasa cihuyy anjay mabar</div>
+                        <div class="no-lapangan">Lapangan 2 ></div>
+                        <div class="desc-lapangan">Lapangan dengan kualitas yang terbuat dari Polyvinyl Chloride dengan net premium.</div>
                         <div class="complement">
                             <div class="icon">
                                 <i class="ri-trophy-line"></i>
@@ -352,16 +441,16 @@
                     <button class="dropdown-btn" onclick="toggleDropdown(this)"></button>
                     <div class="schedule">
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad9" value="jad9" class="checkbox-input">
-                            <label for="jad9">
+                            <input type="checkbox" name="lapangan" id="2-jad1" value="3: 06.00 - 07.00" class="checkbox-input">
+                            <label for="2-jad1">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
                                     06.00 - 07.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
                                 </div>
                                 <div class="status">
                                     Available
@@ -369,16 +458,16 @@
                             </label>
                         </div>
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad10" value="jad10" class="checkbox-input">
-                            <label for="jad10">
+                            <input type="checkbox" name="lapangan" id="2-jad2" value="3: 07.00 - 08.00" class="checkbox-input">
+                            <label for="2-jad2">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
-                                    06.00 - 07.00
+                                    07.00 - 08.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
                                 </div>
                                 <div class="status">
                                     Available
@@ -386,16 +475,84 @@
                             </label>
                         </div>
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad11" value="jad11" class="checkbox-input">
-                            <label for="jad11">
+                            <input type="checkbox" name="lapangan" id="2-jad3" value="3: 08.00 - 09.00" class="checkbox-input">
+                            <label for="2-jad3">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
-                                    06.00 - 07.00
+                                    08.00 - 09.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
+                                </div>
+                                <div class="status">
+                                    Booked
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="2-jad4" value="3: 09.00 - 10.00" class="checkbox-input">
+                            <label for="2-jad4">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    09.00 - 10.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
+                                </div>
+                                <div class="status">
+                                    Booked
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="2-jad5" value="3: 10.00 - 11.00" class="checkbox-input">
+                            <label for="2-jad5">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    10.00 - 11.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
+                                </div>
+                                <div class="status">
+                                    Booked
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="2-jad6" value="3: 11.00 - 12.00" class="checkbox-input">
+                            <label for="2-jad6">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    11.00 - 12.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
+                                </div>
+                                <div class="status">
+                                    Booked
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="2-jad7" value="3: 12.00 - 13.00" class="checkbox-input">
+                            <label for="2-jad7">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    12.00 - 13.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
                                 </div>
                                 <div class="status">
                                     Available
@@ -403,16 +560,33 @@
                             </label>
                         </div>
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad12" value="jad12" class="checkbox-input">
-                            <label for="jad12">
+                            <input type="checkbox" name="lapangan" id="2-jad8" value="3: 13.00 - 14.00" class="checkbox-input">
+                            <label for="2-jad8">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
-                                    06.00 - 07.00
+                                    13.00 - 14.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
+                                </div>
+                                <div class="status">
+                                    Booked
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="2-jad9" value="3: 14.00 - 15.00" class="checkbox-input">
+                            <label for="2-jad9">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    14.00 - 15.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
                                 </div>
                                 <div class="status">
                                     Available
@@ -420,16 +594,33 @@
                             </label>
                         </div>
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad13" value="jad13" class="checkbox-input">
-                            <label for="jad13">
+                            <input type="checkbox" name="lapangan" id="2-jad10" value="3: 15.00 - 16.00" class="checkbox-input">
+                            <label for="2-jad10">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
-                                    06.00 - 07.00
+                                    15.00 - 16.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
+                                </div>
+                                <div class="status">
+                                    Booked
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="2-jad11" value="3: 16.00 - 17.00" class="checkbox-input">
+                            <label for="2-jad11">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    16.00 - 17.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
                                 </div>
                                 <div class="status">
                                     Available
@@ -437,16 +628,16 @@
                             </label>
                         </div>
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad14" value="jad14" class="checkbox-input">
-                            <label for="jad14">
+                            <input type="checkbox" name="lapangan" id="2-jad12" value="3: 17.00 - 18.00" class="checkbox-input">
+                            <label for="2-jad12">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
-                                    06.00 - 07.00
+                                    17.00 - 18.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
                                 </div>
                                 <div class="status">
                                     Available
@@ -454,16 +645,33 @@
                             </label>
                         </div>
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad15" value="jad15" class="checkbox-input">
-                            <label for="jad15">
+                            <input type="checkbox" name="lapangan" id="2-jad13" value="3: 18.00 - 19.00" class="checkbox-input">
+                            <label for="2-jad13">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
-                                    06.00 - 07.00
+                                    18.00 - 19.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
+                                </div>
+                                <div class="status">
+                                    Booked
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="2-jad14" value="3: 19.00 - 20.00" class="checkbox-input">
+                            <label for="2-jad14">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    19.00 - 20.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
                                 </div>
                                 <div class="status">
                                     Available
@@ -471,16 +679,33 @@
                             </label>
                         </div>
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad16" value="jad16" class="checkbox-input">
-                            <label for="jad16">
+                            <input type="checkbox" name="lapangan" id="2-jad15" value="3: 20.00 - 21.00" class="checkbox-input">
+                            <label for="2-jad15">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
-                                    06.00 - 07.00
+                                    20.00 - 21.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
+                                </div>
+                                <div class="status">
+                                    Available
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="2-jad16" value="3: 21.00 - 22.00" class="checkbox-input">
+                            <label for="2-jad16">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    21.00 - 22.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">35.000</span>
                                 </div>
                                 <div class="status">
                                     Available
@@ -494,12 +719,12 @@
             <div class="container">
                 <div class="court-info">
                     <div class="court-pic">
-                        <img src="GOR6.jpg" alt="Badminton Court">
+                        <img src="GOR2.jpg" alt="Badminton Court">
                     </div>
         
                     <div class="court-details">
-                        <div class="no-lapangan">Lapangan 1 ></div>
-                        <div class="desc-lapangan">Lapangan asoy geboy luar biasa cihuyy anjay mabar</div>
+                        <div class="no-lapangan">Lapangan 3 ></div>
+                        <div class="desc-lapangan">Lapangan dengan kualitas yang terbuat dari Polyvinyl Chloride dengan net premium.</div>
                         <div class="complement">
                             <div class="icon">
                                 <i class="ri-trophy-line"></i>
@@ -530,16 +755,16 @@
                     <button class="dropdown-btn" onclick="toggleDropdown(this)"></button>
                     <div class="schedule">
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad17" value="jad17" class="checkbox-input">
-                            <label for="jad17">
+                            <input type="checkbox" name="lapangan" id="3-jad1" value="3: 06.00 - 07.00" class="checkbox-input">
+                            <label for="3-jad1">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
                                     06.00 - 07.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">40.000</span>
                                 </div>
                                 <div class="status">
                                     Available
@@ -547,16 +772,16 @@
                             </label>
                         </div>
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad18" value="jad18" class="checkbox-input">
-                            <label for="jad18">
+                            <input type="checkbox" name="lapangan" id="3-jad2" value="3: 07.00 - 08.00" class="checkbox-input">
+                            <label for="3-jad2">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
-                                    06.00 - 07.00
+                                    07.00 - 08.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">40.000</span>
                                 </div>
                                 <div class="status">
                                     Available
@@ -564,16 +789,33 @@
                             </label>
                         </div>
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad19" value="jad19" class="checkbox-input">
-                            <label for="jad19">
+                            <input type="checkbox" name="lapangan" id="3-jad3" value="3: 08.00 - 09.00" class="checkbox-input">
+                            <label for="3-jad3">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
-                                    06.00 - 07.00
+                                    08.00 - 09.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">40.000</span>
+                                </div>
+                                <div class="status">
+                                    Booked
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="3-jad4" value="3: 09.00 - 10.00" class="checkbox-input">
+                            <label for="3-jad4">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    09.00 - 10.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">40.000</span>
                                 </div>
                                 <div class="status">
                                     Available
@@ -581,16 +823,16 @@
                             </label>
                         </div>
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad20" value="jad20" class="checkbox-input">
-                            <label for="jad20">
+                            <input type="checkbox" name="lapangan" id="3-jad5" value="3: 10.00 - 11.00" class="checkbox-input">
+                            <label for="3-jad5">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
-                                    06.00 - 07.00
+                                    10.00 - 11.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">40.000</span>
                                 </div>
                                 <div class="status">
                                     Available
@@ -598,16 +840,33 @@
                             </label>
                         </div>
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad21" value="jad21" class="checkbox-input">
-                            <label for="jad21">
+                            <input type="checkbox" name="lapangan" id="3-jad6" value="3: 11.00 - 12.00" class="checkbox-input">
+                            <label for="3-jad6">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
-                                    06.00 - 07.00
+                                    11.00 - 12.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">40.000</span>
+                                </div>
+                                <div class="status">
+                                    Booked
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="3-jad7" value="3: 12.00 - 13.00" class="checkbox-input">
+                            <label for="3-jad7">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    12.00 - 13.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">40.000</span>
                                 </div>
                                 <div class="status">
                                     Available
@@ -615,16 +874,16 @@
                             </label>
                         </div>
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad22" value="jad22" class="checkbox-input">
-                            <label for="jad22">
+                            <input type="checkbox" name="lapangan" id="3-jad8" value="3: 13.00 - 14.00" class="checkbox-input">
+                            <label for="3-jad8">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
-                                    06.00 - 07.00
+                                    13.00 - 14.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">40.000</span>
                                 </div>
                                 <div class="status">
                                     Available
@@ -632,16 +891,16 @@
                             </label>
                         </div>
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad23" value="jad23" class="checkbox-input">
-                            <label for="jad23">
+                            <input type="checkbox" name="lapangan" id="3-jad9" value="3: 14.00 - 15.00" class="checkbox-input">
+                            <label for="3-jad9">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
-                                    06.00 - 07.00
+                                    14.00 - 15.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">40.000</span>
                                 </div>
                                 <div class="status">
                                     Available
@@ -649,16 +908,118 @@
                             </label>
                         </div>
                         <div class="form-element">
-                            <input type="checkbox" name="lapangan" id="jad24" value="jad24" class="checkbox-input">
-                            <label for="jad24">
+                            <input type="checkbox" name="lapangan" id="3-jad10" value="3: 15.00 - 16.00" class="checkbox-input">
+                            <label for="3-jad10">
                                 <div class="durasi">
                                     60 Menit
                                 </div>
                                 <div class="jam">
-                                    06.00 - 07.00
+                                    15.00 - 16.00
                                 </div>
-                                <div class="harga">
-                                    Rp 35.000
+                                <div class="hargacol">
+                                    Rp  <span class="harga">40.000</span>
+                                </div>
+                                <div class="status">
+                                    Booked
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="3-jad11" value="3: 16.00 - 17.00" class="checkbox-input">
+                            <label for="3-jad11">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    16.00 - 17.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">40.000</span>
+                                </div>
+                                <div class="status">
+                                    Available
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="3-jad12" value="3: 17.00 - 18.00" class="checkbox-input">
+                            <label for="3-jad12">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    17.00 - 18.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">40.000</span>
+                                </div>
+                                <div class="status">
+                                    Available
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="3-jad13" value="3: 18.00 - 19.00" class="checkbox-input">
+                            <label for="3-jad13">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    18.00 - 19.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">40.000</span>
+                                </div>
+                                <div class="status">
+                                    Booked
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="3-jad14" value="3: 19.00 - 20.00" class="checkbox-input">
+                            <label for="3-jad14">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    19.00 - 20.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">40.000</span>
+                                </div>
+                                <div class="status">
+                                    Available
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="3-jad15" value="3: 20.00 - 21.00" class="checkbox-input">
+                            <label for="3-jad15">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    20.00 - 21.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">40.000</span>
+                                </div>
+                                <div class="status">
+                                    Available
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" name="lapangan" id="3-jad16" value="3: 21.00 - 22.00" class="checkbox-input">
+                            <label for="3-jad16">
+                                <div class="durasi">
+                                    60 Menit
+                                </div>
+                                <div class="jam">
+                                    21.00 - 22.00
+                                </div>
+                                <div class="hargacol">
+                                    Rp  <span class="harga">40.000</span>
                                 </div>
                                 <div class="status">
                                     Available
@@ -672,12 +1033,12 @@
 
             <div class="h-line"></div>
 
-            <div class="item-tambahan">
+            <!-- <div class="item-tambahan">
                 <span style="font-size: 17px; font-weight: 800; color: var(--main-color);"><i class="ri-arrow-right-s-fill" style="color: var(--text-color);"></i>Item Tambahan</span>
             </div>
             <div class="item-list" id="item-list">
                 <div class="items">
-                    <input type="checkbox" id="item1" class="checkbox">
+                    <input type="checkbox" id="item1" class="checkbox-input">
                     <label for="item1" class="item-desc">
                         <div class="image">
                             <img src="GOR2.jpg" alt="Item Image">
@@ -708,38 +1069,38 @@
                     </label>
                 </div>
                 <div class="items">
-                    <input type="checkbox" id="item2" class="checkbox">
+                    <input type="checkbox" id="item2" class="checkbox-input">
                     <label for="item2" class="item-desc">
-                        <div class="image">
-                            <img src="GOR2.jpg" alt="Item Image">
+                      <div class="image">
+                        <img src="GOR2.jpg" alt="Item Image">
+                      </div>
+                      <div class="nama-item">
+                        Shuttlecock JP Gold
+                      </div>
+                      <div class="harga-item">
+                        Rp 35.000
+                      </div>
+                      <div class="quantity-form" style="display: none;">
+                        <div class="qty-container">
+                          <div class="qty-title">Qty:</div>
+                          <div class="qty-form">
+                            <div class="stepper-input">
+                              <input type="range" min="0" max="50" value="0">
+                              <div class="qty-input">
+                                <button class="minus-btn">-</button>
+                                <div class="range">
+                                  <div class="list">0</div>
+                                </div>
+                                <button class="plus-btn">+</button>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <div class="nama-item">
-                            Shuttlecock JP Gold
-                        </div>
-                        <div class="harga-item">
-                            Rp 35.000
-                        </div>
-                        <div class="quantity-form">
-                            <div class="qty-container">
-                                <div class="qty-title">Qty:</div>
-                                <div class="qty-form">
-                                    <div class="stepper-input">
-                                        <input type="range" min="0" max="50" value="0">
-                                        <div class="qty-input">
-                                            <button class="minus-btn">-</button>
-                                            <div class="range">
-                                                <div class="list"></div>
-                                            </div>
-                                            <button class="plus-btn">+</button>
-                                        </div>
-                                    </div>
-                                </div> 
-                            </div> 
-                        </div>
+                      </div>
                     </label>
-                </div>
+                  </div>
             
-            </div>
+            </div> -->
 
             
         </div>

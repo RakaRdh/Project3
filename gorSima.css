@@ -219,9 +219,9 @@ article p{
     margin-top: 10px;
 }
 
-input{
+/* input{
     display: none;
-}
+} */
 
 .calendar-container {
     max-width: 100%;
@@ -230,64 +230,31 @@ input{
     border: 1px solid --bg-color;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
-}
-
-.dates{
-    width: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: var(--text-color);
 }
 
-.dates-item{
-    width: 100px;
-    height: 70px;
-    background-color: var(--bg-color);
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 10px;
+.container-container label {
+    font-size: 16px;
+    color: #333;
+}
+
+.calendar-container input[type="date"] {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 80%;
+    /* Add these styles for calendar appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: var(--bg-color);
     cursor: pointer;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-.day{
-    font-size: 13px;
-    font-weight: 400;
-}
-.dates{
-    width: 100%;
-    font-size: 14px;
-    font-weight: 700;
-}
-.timings input:checked + label{
-    background-color: var(--main-color);
-    color: var(--bg-color);
-    transition: all 0.2s ease;
-}
-.v-line{
-    width: 1.3px;
-    height: 50px;
-    background-color: var(--darkerW-color);
-    border: none;
-    margin-right: 30px;
-    margin-left: 30px;
 }
 
-.more-dates{
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--text-color);
-    padding: 70px;
-    background-color: var(--main-color);
-    
-}
+
 
 .container {
     max-width: 100%;
@@ -387,6 +354,7 @@ input{
     display: none;
 }
 
+
 .form-element label {
     width: 100%;
     display: flex;
@@ -412,7 +380,7 @@ input{
     color: var(--main-color);
 }
 
-.harga {
+.hargacol {
     font-size: 17px;
     font-weight: 600;
 }
