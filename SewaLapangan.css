@@ -275,6 +275,7 @@ header {
 
 .dropdown {
     position: relative;
+    margin-right: 10px;
 }
 
 .dropdown-toggle {
@@ -290,6 +291,7 @@ header {
 .dropdown-toggle:hover {
     background-color: #555; /* Efek hover pada dropdown */
 }
+
 
 .dropdown-content {
     position: absolute;

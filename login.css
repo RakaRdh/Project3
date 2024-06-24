@@ -105,9 +105,15 @@ body {
    border-radius: 5px;
    cursor: pointer;
    color: #f7f7f7;
+   width: 100%;
 }
 
 .btn:hover{
     transform: scale(1.025);
     transition: all .2s ease-in-out;
 }
+
+/* .buttons{
+   width: 100%;
+   display: fixed;
+} */
