@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="Vector.png">
+    <title>Gor Biru</title>
+    <link rel="stylesheet" href="Gor.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header>
+        <a href="Home.html" class="logo">
+            <svg width="81" height="81" viewBox="0 0 81 81" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M40.5 0C18.127 0 0 18.127 0 40.5C0 62.873 18.127 81 40.5 81C62.873 81 81 62.873 81 40.5C81 18.127 62.873 0 40.5 0ZM48.3714 53.2542H18.8129L32.645 27.7621H62.2034L48.3714 53.2542Z" fill="white"/>
+                <path fill="currentColor" d="M14.2771 51.583L60.3952 25.3667L64.2422 32.1341L18.1241 58.3504L14.2771 51.583Z" fill="white"/>
+            </svg>
+        </a>
+        <ul class="navbar">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="PageSewaLapangan.html" class="active">Sewa Lapangan</a></li>
+            <li><a href="PageBerita.html">Blog</a></li>
+            <li><a href="About.html">About</a></li>
+        </ul>
+        <div class="main">
+            <button id="login-button" onclick="location.href='Login.html'">Masuk</button>
+            <button id="register-button" onclick="location.href='Register.html'">Daftar</button>
+            <a href="Profile.html" class="user" style="display: none;"><i class="ri-user-fill"></i></a>
+            <button href="Logout.html" style="display: none;" button id="logout-button"onclick="location.href='Logout.html'" class="log-out">Logout</button>
+        </div>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+        <script type="text/javascript">
+         let menu = document.querySelector("#menu-icon");
+            let navbar = document.querySelector(".navbar");
+    
+            menu.onclick = () => {
+                menu.classList.toggle('bx-x');
+                navbar.classList.toggle('open');
+            }
+
+            // Check if user is logged in
+            window.onload = function() {
+                const isLoggedIn = localStorage.getItem('isLoggedIn');
+                if (isLoggedIn === 'true') {
+                    document.querySelector('#login-button').style.display = 'none';
+                    document.querySelector('#register-button').style.display = 'none';
+                    document.querySelector('.user').style.display = 'block';
+                    document.querySelector('.log-out').style.display = 'block';
+                }
+            }
+                // Handle "Pesan Sekarang" click
+    $('.requires-login').click(function(event) {
+        if (!isLoggedIn) {
+            event.preventDefault();
+            $('#login-modal').show();
+        }
+    });
+
+    // Close modal
+    $('.modal .close').click(function() {
+        $('#login-modal').hide();
+    });
+
+    $(window).click(function(event) {
+        if ($(event.target).is('#login-modal')) {
+            $('#login-modal').hide();
+        }
+    });
+        </script>
+    </header>
+    <!-- NAVBAR -->
+    
+   <!-- CONTENT -->
+
+   <!-- Modal -->
+<div class="modal" id="login-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Anda harus login terlebih dahulu untuk memesan lapangan.</p>
+        <a href="Login.html" class="button">Login</a>
+    </div>
+</div>
+
+   <div class="content">
+    <div class="main-content">
+        <div class="court-pic-title">
+            <img src="GOR5.jpg" alt="">
+        </div>
+
+        <div class="h-line"></div>
+
+        <article>
+            <div class="deskripsi">
+                <span style="font-size: 17px; font-weight: 800; color: var(--main-color);"><i class="ri-arrow-right-s-fill" style="color: var(--text-color);"></i>Deskripsi</span>
+            </div>
+            <p>
+                TIGA LAPANGAN BULUTANGKIS DI JATIRAWASARI BERKUALITAS INTERNATIONAL DAN BERKARPET VINYL
+                <br><br>
+                BUKA : SETIAP HARI JAM 06.00 - 00.00
+                <br><br>
+                FASILITAS : PARKIR, TOILET, KAMAR GANTI, MUSHOLA KANTIN, SMOKING AREA DAN WIFI.
+                <br><br>
+                TERSEDIA : SHUTTLECOOCKS, GRIP, PENYEWAAN RAKET DAN SEPATU.
+                TERSEDIA ANEKA MAKANAN & MINUMAN
+                <br><br>
+                PEMAIN WAJIB MENGGUNAKAN SEPATU BULUTANGKIS.
+                <br><br>
+                DILARANG KERAS!!!
+                1. MEROKOK / VAPING DIAREA LAPANGAN DAN TEMPAT DUDUK PEMAIN (untuk yang merokok tersedia di Smoking Area )
+                2. MEMBAWA MAKANAN DAN MINUMAN DARI LUAR.
+                3. MEMBAWA HEWAN.
+            </p>
+        </article>
+
+        <div class="h-line"></div>
+
+        <div class="pilih-lapangan">
+            <span style="font-size: 17px; font-weight: 800; color: var(--main-color);"><i class="ri-arrow-right-s-fill" style="color: var(--text-color);"></i>Pilih Lapangan</span>
+        </div>
+
+        <!-- PENDING -->
+        <div class="calendar-container">
+            <label for="date-book">Pilih Tanggal: </label>
+            <input type="date" name="date-book" id="date-book" required>
+        </div>
+
+        <div class="container">
+            <div class="court-info">
+                <div class="court-pic">
+                    <img src="GOR5.jpg" alt="Badminton Court">
+                </div>
+    
+                <div class="court-details">
+                    <div class="no-lapangan">Lapangan 1 ></div>
+                    <div class="desc-lapangan">Lapangan dengan kualitas yang terbuat dari Polyvinyl Chloride dengan net premium.</div>
+                    <div class="complement">
+                        <div class="icon">
+                            <i class="ri-trophy-line"></i>
+                        </div>
+                        <div class="text">
+                            Badminton
+                        </div>
+                    </div>
+                    <div class="complement">
+                        <div class="icon">
+                            <i class="ri-map-pin-4-line"></i>
+                        </div>
+                        <div class="text">
+                            Indoor
+                        </div>
+                    </div>
+                    <div class="complement">
+                        <div class="icon">
+                            <i class="ri-align-justify"></i>
+                        </div>
+                        <div class="text">
+                            Polyvinyl Chloride
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="schedule-select">
+                <button class="dropdown-btn" onclick="toggleDropdown(this)"></button>
+                <div class="schedule">
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="1-jad1" value="1 : 06.00 - 07.00" class="checkbox-input">
+                        <label for="1-jad1">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                06.00 - 07.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Booked
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="1-jad2" value="1: 07.00 - 08.00" class="checkbox-input">
+                        <label for="1-jad2">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                07.00 - 08.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Booked
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="1-jad3" value="1: 08.00 - 09.00" class="checkbox-input">
+                        <label for="1-jad3">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                08.00 - 09.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="1-jad4" value="1: 09.00 - 10.00" class="checkbox-input">
+                        <label for="1-jad4">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                09.00 - 10.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="1-jad5" value="1: 10.00 - 11.00" class="checkbox-input">
+                        <label for="1-jad5">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                10.00 - 11.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Booked
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="1-jad6" value="1: 11.00 - 12.00" class="checkbox-input">
+                        <label for="1-jad6">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                11.00 - 12.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="1-jad7" value="1: 12.00 - 13.00" class="checkbox-input">
+                        <label for="1-jad7">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                12.00 - 13.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="1-jad8" value="1: 13.00 - 14.00" class="checkbox-input">
+                        <label for="1-jad8">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                13.00 - 14.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="1-jad9" value="1: 14.00 - 15.00" class="checkbox-input">
+                        <label for="1-jad9">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                14.00 - 15.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="1-jad10" value="1: 15.00 - 16.00" class="checkbox-input">
+                        <label for="1-jad10">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                15.00 - 16.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="1-jad11" value="1: 16.00 - 17.00" class="checkbox-input">
+                        <label for="1-jad11">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                16.00 - 17.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Booked
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="1-jad12" value="1: 17.00 - 18.00" class="checkbox-input">
+                        <label for="1-jad12">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                17.00 - 18.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="1-jad13" value="1: 18.00 - 19.00" class="checkbox-input">
+                        <label for="1-jad13">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                18.00 - 19.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="1-jad14" value="1: 19.00 - 20.00" class="checkbox-input">
+                        <label for="1-jad14">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                19.00 - 20.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="1-jad15" value="1: 20.00 - 21.00" class="checkbox-input">
+                        <label for="1-jad15">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                20.00 - 21.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Booked
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="1-jad16" value="1: 21.00 - 22.00" class="checkbox-input">
+                        <label for="1-jad16">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                21.00 - 22.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Booked
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="court-info">
+                <div class="court-pic">
+                    <img src="GOR5.jpg" alt="Badminton Court">
+                </div>
+    
+                <div class="court-details">
+                    <div class="no-lapangan">Lapangan 2 ></div>
+                    <div class="desc-lapangan">Lapangan dengan kualitas yang terbuat dari Polyvinyl Chloride dengan net premium.</div>
+                    <div class="complement">
+                        <div class="icon">
+                            <i class="ri-trophy-line"></i>
+                        </div>
+                        <div class="text">
+                            Badminton
+                        </div>
+                    </div>
+                    <div class="complement">
+                        <div class="icon">
+                            <i class="ri-map-pin-4-line"></i>
+                        </div>
+                        <div class="text">
+                            Indoor
+                        </div>
+                    </div>
+                    <div class="complement">
+                        <div class="icon">
+                            <i class="ri-align-justify"></i>
+                        </div>
+                        <div class="text">
+                            Polyvinyl Chloride
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="schedule-select">
+                <button class="dropdown-btn" onclick="toggleDropdown(this)"></button>
+                <div class="schedule">
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="2-jad1" value="3: 06.00 - 07.00" class="checkbox-input">
+                        <label for="2-jad1">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                06.00 - 07.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="2-jad2" value="3: 07.00 - 08.00" class="checkbox-input">
+                        <label for="2-jad2">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                07.00 - 08.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="2-jad3" value="3: 08.00 - 09.00" class="checkbox-input">
+                        <label for="2-jad3">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                08.00 - 09.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Booked
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="2-jad4" value="3: 09.00 - 10.00" class="checkbox-input">
+                        <label for="2-jad4">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                09.00 - 10.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Booked
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="2-jad5" value="3: 10.00 - 11.00" class="checkbox-input">
+                        <label for="2-jad5">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                10.00 - 11.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Booked
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="2-jad6" value="3: 11.00 - 12.00" class="checkbox-input">
+                        <label for="2-jad6">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                11.00 - 12.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Booked
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="2-jad7" value="3: 12.00 - 13.00" class="checkbox-input">
+                        <label for="2-jad7">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                12.00 - 13.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="2-jad8" value="3: 13.00 - 14.00" class="checkbox-input">
+                        <label for="2-jad8">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                13.00 - 14.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Booked
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="2-jad9" value="3: 14.00 - 15.00" class="checkbox-input">
+                        <label for="2-jad9">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                14.00 - 15.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="2-jad10" value="3: 15.00 - 16.00" class="checkbox-input">
+                        <label for="2-jad10">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                15.00 - 16.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Booked
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="2-jad11" value="3: 16.00 - 17.00" class="checkbox-input">
+                        <label for="2-jad11">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                16.00 - 17.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="2-jad12" value="3: 17.00 - 18.00" class="checkbox-input">
+                        <label for="2-jad12">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                17.00 - 18.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="2-jad13" value="3: 18.00 - 19.00" class="checkbox-input">
+                        <label for="2-jad13">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                18.00 - 19.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Booked
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="2-jad14" value="3: 19.00 - 20.00" class="checkbox-input">
+                        <label for="2-jad14">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                19.00 - 20.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="2-jad15" value="3: 20.00 - 21.00" class="checkbox-input">
+                        <label for="2-jad15">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                20.00 - 21.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="2-jad16" value="3: 21.00 - 22.00" class="checkbox-input">
+                        <label for="2-jad16">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                21.00 - 22.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="court-info">
+                <div class="court-pic">
+                    <img src="GOR5.jpg" alt="Badminton Court">
+                </div>
+    
+                <div class="court-details">
+                    <div class="no-lapangan">Lapangan 3 ></div>
+                    <div class="desc-lapangan">Lapangan dengan kualitas yang terbuat dari Polyvinyl Chloride dengan net premium.</div>
+                    <div class="complement">
+                        <div class="icon">
+                            <i class="ri-trophy-line"></i>
+                        </div>
+                        <div class="text">
+                            Badminton
+                        </div>
+                    </div>
+                    <div class="complement">
+                        <div class="icon">
+                            <i class="ri-map-pin-4-line"></i>
+                        </div>
+                        <div class="text">
+                            Indoor
+                        </div>
+                    </div>
+                    <div class="complement">
+                        <div class="icon">
+                            <i class="ri-align-justify"></i>
+                        </div>
+                        <div class="text">
+                            Polyvinyl Chloride
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="schedule-select">
+                <button class="dropdown-btn" onclick="toggleDropdown(this)"></button>
+                <div class="schedule">
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="3-jad1" value="3: 06.00 - 07.00" class="checkbox-input">
+                        <label for="3-jad1">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                06.00 - 07.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="3-jad2" value="3: 07.00 - 08.00" class="checkbox-input">
+                        <label for="3-jad2">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                07.00 - 08.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="3-jad3" value="3: 08.00 - 09.00" class="checkbox-input">
+                        <label for="3-jad3">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                08.00 - 09.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Booked
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="3-jad4" value="3: 09.00 - 10.00" class="checkbox-input">
+                        <label for="3-jad4">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                09.00 - 10.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="3-jad5" value="3: 10.00 - 11.00" class="checkbox-input">
+                        <label for="3-jad5">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                10.00 - 11.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="3-jad6" value="3: 11.00 - 12.00" class="checkbox-input">
+                        <label for="3-jad6">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                11.00 - 12.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Booked
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="3-jad7" value="3: 12.00 - 13.00" class="checkbox-input">
+                        <label for="3-jad7">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                12.00 - 13.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="3-jad8" value="3: 13.00 - 14.00" class="checkbox-input">
+                        <label for="3-jad8">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                13.00 - 14.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="3-jad9" value="3: 14.00 - 15.00" class="checkbox-input">
+                        <label for="3-jad9">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                14.00 - 15.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="3-jad10" value="3: 15.00 - 16.00" class="checkbox-input">
+                        <label for="3-jad10">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                15.00 - 16.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Booked
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="3-jad11" value="3: 16.00 - 17.00" class="checkbox-input">
+                        <label for="3-jad11">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                16.00 - 17.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="3-jad12" value="3: 17.00 - 18.00" class="checkbox-input">
+                        <label for="3-jad12">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                17.00 - 18.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="3-jad13" value="3: 18.00 - 19.00" class="checkbox-input">
+                        <label for="3-jad13">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                18.00 - 19.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Booked
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="3-jad14" value="3: 19.00 - 20.00" class="checkbox-input">
+                        <label for="3-jad14">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                19.00 - 20.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="3-jad15" value="3: 20.00 - 21.00" class="checkbox-input">
+                        <label for="3-jad15">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                20.00 - 21.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-element">
+                        <input type="checkbox" name="lapangan" id="3-jad16" value="3: 21.00 - 22.00" class="checkbox-input">
+                        <label for="3-jad16">
+                            <div class="durasi">
+                                60 Menit
+                            </div>
+                            <div class="jam">
+                                21.00 - 22.00
+                            </div>
+                            <div class="hargacol">
+                                Rp  <span class="harga">55.000</span>
+                            </div>
+                            <div class="status">
+                                Available
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="h-line"></div>
+        
+    </div>
+
+    <div class="side-bar">
+        <div class="side-content">
+            <div class="gor-desc">
+                <p id="gor-name">Gor Biru</p>
+                <span id="rating"><i class="ri-star-fill"></i> 4.8</span>
+            </div>
+
+            <div class="h-line-side"></div>
+
+            <div class="locfaci">
+                <p class="judul">Location</p>
+                <a href="https://maps.app.goo.gl/tGBTEHKK5jWj3C9XA" target="_blank">
+                    <div class="maps">
+                        <div class="text">
+                            <p>Jalan Kukusan Teknik Jaya Raya RT.15 RW.11</p>
+                        </div>
+                        <div class="pic">
+                            <i class="ri-map-pin-2-fill"></i>
+                        </div>
+                    </div>
+                </a>
+                
+                <p class="judul">Facilities</p>
+                <div class="facilities">
+                    <div class="facil-list">
+                        <div class="facil-icon"><i class="ri-car-fill"></i></div>
+                        <div class="facil-text">Parkir <br>Mobil</div>
+                    </div>
+                    <div class="facil-list">
+                        <div class="facil-icon"><i class="ri-motorbike-fill"></i></i></div>
+                        <div class="facil-text">Parkir Motor</div>
+                    </div>
+                    <div class="facil-list">
+                        <div class="facil-icon"><i class="ri-cup-fill"></i></i></div>
+                        <div class="facil-text">Jual Minuman</div>
+                    </div>
+                    <div class="facil-list">
+                        <div class="facil-icon"><i class="ri-bowl-fill"></i></i></div>
+                        <div class="facil-text">Jual Makanan</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-line-side"></div>
+
+            <div class="order">
+                <div class="judul">Mulai Dari</div>
+                <div class="subjudul">Rp 55.000/sesi</div>
+                <div class="buttonPesan requires-login">
+                    <div class="keterangan">Pesan Sekarang</div>
+                </div>
+                <div class="jumlahItem">
+                    <div class="keterangan" id="itemCount">
+                        0 Item Dipilih
+                    </div>
+                </div>
+            </div>  
+            
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CONTENT -->
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="Privacy&Policy.html">Privacy & Policy</a></li>
+                        <li><a href="Terms&Conditions.html">Terms & Condition</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="ContactUs.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>How to Reach Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/ayo.indonesia/" target="_blank"><i class="ri-instagram-line"></i></a>
+                        <a href="https://maps.app.goo.gl/vyFhwrUeHUohAFvD8" target="_blank"><i class="ri-map-pin-2-fill"></i></a>
+                        <a href="https://x.com/ayosportapp" target="_blank"><i class="ri-twitter-fill"></i></a>
+                        <a href="https://web.facebook.com/ayo.indonesia.sports?_rdc=1&_rdr" target="_blank"><i class="ri-facebook-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER -->
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="SewaLogic.js"></script>
+</body>
+</html>
