@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "html-bookstore:latest"
-        CONTAINER_NAME = "html-bookstore-container"
-        GIT_REPO = "https://github.com/MawanRequiem/HTML-BookStore-Project.git"
+        IMAGE_NAME = "html-supersportapp:latest"
+        CONTAINER_NAME = "html-supersportapp-container"
+        GIT_REPO = "https://github.com/RakaRdh/Project3.git"
     }
 
     stages {
