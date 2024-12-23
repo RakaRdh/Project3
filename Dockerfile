@@ -1,14 +1,17 @@
-# Menggunakan NGINX sebagai base image
+# Base image NGINX
 FROM nginx:alpine
 
-# Set lokasi direktori default NGINX untuk file HTML
+# Set lokasi kerja
 WORKDIR /usr/share/nginx/html
 
-# Hapus file default dari NGINX
+# Hapus file default NGINX
 RUN rm -rf ./*
 
-# Salin semua file HTML dari proyek Anda ke direktori NGINX
-COPY . .
+# Salin file HTML ke direktori NGINX
+COPY . /usr/share/nginx/html
 
-# Ekspos port 80 untuk aplikasi
+# Salin konfigurasi NGINX yang diperbarui
+COPY default.conf /etc/nginx/conf.d/default.conf
+
+# Ekspos port 80
 EXPOSE 80
